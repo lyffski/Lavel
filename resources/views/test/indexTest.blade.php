@@ -13,7 +13,7 @@
        
         @foreach($students as $student)
         <tr>
-            <th>{{ $student['Forename'] }}</th>
+            <th>{{ $student['Forename'] }}</th> <!---print the value "Forename" of array "$student" using {{}}--->
             <th>{{ $student['Lastname'] }}</th>
         </tr>
         @endforeach

@@ -18,10 +18,10 @@ Route::get('/', function () {
 });
 
 //test
-Route::get('/test', function(){
+Route::get('/test', function(){ 
     return view('/test/indexTest');
 });
-Route::resource('test', 'Student_controller');
+Route::resource('test', 'Student_controller'); //resource when
 //endtest
 
 
