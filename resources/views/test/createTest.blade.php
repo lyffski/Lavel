@@ -13,8 +13,8 @@
     @if(\Session::has('success')) <!---if session has a key or var 'success' the code below will be compile---> 
         <div>{{ \Session::get('success')}}</div>
     @endif
-    <form method="post" action="{{url('test')}}">  <!---action set the url to "test" (wildcard, I guess) and will be provided--->
-    {{ csrf_field() }}            <!---to the route and form there will be direct further into the app (check the controller)--->
+    <form method="post" action="{{url('test')}}">  <!---action set the url to "test" #wildcard, I guess# and will be provided--->
+    {{ csrf_field() }}            <!---to the route and form there will be direct further into the app #check the controller#--->
     <div>
         <input type="text" name="forename" placeholder="Entry your Forename">
     </div>

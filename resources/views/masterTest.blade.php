@@ -7,8 +7,8 @@
 </head>
 <body>
 <h1>MasterTest</h1>
-<div><a href="/test/create">Add</a></div>
-<div>
+
+<div>          <!------>
     @yield('content')
 </div>
 </body>
