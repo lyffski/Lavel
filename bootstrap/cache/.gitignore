@@ -1,0 +1,156 @@
+*
+!.gitignore
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+_ide_helper.php
+/.idea
+/.vscode
+# Eclipse project files
+.buildpath
+.project
+.settings/
+# Ignore cache
+.cache/
+# Ignore user created files :)
+*.bak
+*.orig
+# Ignore system files
+.bash_history
+LICENSE_AFL.txt
+LICENSE.html
+LICENSE.txt
+LICENSE_EE*
+RELEASE_NOTES.txt
+.ssh/
+error_log
+.htpasswds
+/.htaccess
+php.ini.sample
+.modgit/
+_vti_bin/
+_vti_cnf/
+_vti_inf.html
+_vti_log/
+_vti_pvt/
+_vti_txt/
+tmp/
+php.ini
+_old/
+.htpasswds/
+.htpasswd
+.viminfo
+.profile
+.bashrc
+.bash_logout
+.bash_history
+.modgit/
+.modman/
+pkginfo
+nohup.out
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+#Laravel Specific files
+/vendor
+.env
+/public/.htaccess
+/storage
+storage/*.key
+
+phpMyAdmin/
+nbproject/
+inc/mysql_config.php
+!.gitignore
+
+#######phpmyadmin
+
+# Directory for creating releases
+/release/
+# Configuration files
+/config.inc.php
+/config.header.inc.php
+/config.footer.inc.php
+# Upload/save dirs
+/upload/
+/save/
+/tmp/
+# For setup script
+/config/
+# ctags
+tags
+# Editor files
+phpmyadmin.wpj
+.projectOptions
+.vimrc
+.project
+.settings
+.buildpath
+.cache
+.idea
+.netbeans
+*.sw[op]
+# Web server files
+web.config
+.htaccess
+# Locales
+/locale/
+# Temporary files to generate locales for Twig
+/twig-templates/
+# Backups
+*~
+# API documentation
+/apidoc/
+/doc/linkcheck/
+# Demo server
+revision-info.php
+# PHP_CodeSniffer
+phpcs.xml
+# PHPUnit
+phpunit.xml
+/test/bootstrap.php
+.phpunit.result.cache
+# Jenkins
+/build/
+# Netbeans ide stuff
+/nbproject/
+# Eclipse ide stuff
+/.pydevproject
+# Ant cache
+cache.properties
+# Composer
+composer.lock
+/vendor/
+# NPM
+/node_modules/
+phpstan.neon

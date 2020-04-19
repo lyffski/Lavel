@@ -1,0 +1,83 @@
+artisan= interact with project
+
+npm_js_packmanger=
+
+migrate= 
+    w it should create itself, desc changes, mod db 4 team
+
+.env= 
+    will hold all config to your enviroment
+
+config=
+    Allconfiguration files are stored there
+
+#"Any variable" in your .env= file "can be overridden" by "external environment variables" such as server-level or system-level environment variables.
+
+'debug' => env('APP_DEBUG', false),
+    second parameter is the "default value". can be overwritten
+
+APP_ENV= 
+    detection can be overridden by a server-level environment variable. useful when share the same app for different env config, to set up a given host to match a given environment in your server's configs.
+
+debug_blacklist= 
+    in "config/app.php" to hide specific variable
+
+Accessing_Configuration_Values=
+    config(['app.timezone' => 'America/Chicago']);
+    → to set up config on start, the given parameters overwritte the default ones
+
+Configuration_Caching=
+    (artisan config:cache_command) execute if ensured is, that you call only the env_func = from your config_files=, Once the config been cached, the env_file= will not load and all calls to env_func= will return NULL 
+
+Maintenance_Mode=
+    easy to "disable" your application when Maintence_Mode active while "updateing"|"performing_maintenance"
+    if Mode one (503_error) thrown → avoid with command:(php artisan down)
+    -addly. param. "message"|"retrey"
+    -You may customize the default maintenance mode template by defining your own template at resources/views/errors/503.blade.php.
+    -While maintenance mode, no queued jobs handled. back to normal when mode off
+
+
+#Concept
+middleware= 
+    kind of Rule/condition
+
+Kernel= 
+    Feed it HTTP requests and it will return HTTP responses.
+
+Service_provider= 
+    central place of all Laravel application bootstrapping to configure app
+    "responsible_for" Bootstrapping such as the database, queue, validation, and routing components.
+    "most important aspect of the  bootstrap process" Service_provider 
+    "The application instance is created, the service providers are registered, and the request is handed to the bootstrapped application"
+
+Bootstrapping= 
+    the process Laravel takes to combine the necessary bits in the framework together to be able to process and handle the functionality thrown at the system.
+
+deferred_provider=  
+    will not be loaded on every request, but only when the services they provide are actually needed.
+
+service_container=
+ is a powerful tool for managing class dependencies and performing dependency injection
+    dependency=class dependencies are "injected" into the class via the constructor or, in some cases, "setter" methods. //the injector class injects the service=(dependency) to the client=(dependent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
