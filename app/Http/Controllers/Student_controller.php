@@ -14,7 +14,8 @@ class Student_controller extends Controller
      */
     public function index()
     {
-
+        $students = Student_model::all()->toArray();
+        return view("test.indexTest", compact('students'));
     }
 
     /**
@@ -44,7 +45,7 @@ class Student_controller extends Controller
             'lastname' => $request->get('lastname')
         ]);
         $student_obj1->save();
-        return redirect()->route("test.create")->with('success', 'You successfully added a Student');
+        return redirect()->route("test.index")->with('success', 'You successfully added a Student');
     }                   //route to folder:"test" to func of the current ctr here you use the "create" func and passing with() that contain a message with key "success"
 
     /**

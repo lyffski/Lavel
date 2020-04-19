@@ -18,8 +18,8 @@ Route::get('/', function () {
 });
 
 //test
-Route::get('/create', function(){
-    return view('/test/createTest');
+Route::get('/test', function(){
+    return view('/test/indexTest');
 });
 Route::resource('test', 'Student_controller');
 //endtest
