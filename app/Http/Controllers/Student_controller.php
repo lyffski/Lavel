@@ -13,8 +13,8 @@ class Student_controller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $students = Student_model::all()->toArray();
-        return view("test.indexTest", compact('students'));
+        $students_obj0 = Student_model::all()->toArray();
+        return view("test.indexTest", compact('students_obj0'));
     }   //return .php file with given compacted array named 'students'
 
 

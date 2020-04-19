@@ -1,0 +1,39 @@
+Creat_Table=
+• creat file .blade.php 
+• there create <form method="psot" action={{url('url_var')}}> the url_var should be handled in web.php
+• In route:
+Route::resrouce("url_var", "any_controller")
+• In Controller that was created with --resource param in terminal:
+in store(Request $request) func the input should be validet with validate($request, [any_arr]) func
+if validate good crete new obj of the model you using get the values with 'forename' => $request->get('forename') !!You have to save when you use func with 'request' param
+and as return: redirect()->route("{var_(from view input)}.{a func from the controller ex. "index"}->with(msg) → optional
+• this can be link with <a href="{{route('url_var.create')}}"> while url is ?? and create a method form create
+
+Use_edit=
+• can be link with href="{{action('any_ctr@edit', $var['id'])}}"
+• In Controller:
+in method edit($id) → create obj of model !use ::find($id) to asso with id with table that been created with "store" method that receive (Request)
+• validate() the request with condition →then→ create obj of model you use and set the values of key like that: 'forename' => $request->get('forename')
+!since the func receive (Request) you have to save it if you work with request you also have to reffer by this $request
+• return redirect()->route("{url_var?}.{func in ctr {default=index_func}}") optional to append with() func
+→→→the index was already desc so go above and check once more time
+
+destroy_record=
+creata in index.blade.php delete btn
+can be link with:
+    create <form method="post" action="{{action('any_ctr@destroy', $)}}">
+• then in ctr under method destroy($id) create obj of model that you working with and append to the model::find($id) to already asso id with the user you want to delete
+• then using the obj call func: obj->delete() to delete record form table
+• return redirect()->route('{url_var?}.{and method of the ctr you used to work with this model to modif the db}') you can also append with() func if you want
+
+
+
+
+
+
+
+
+
+
+
+
