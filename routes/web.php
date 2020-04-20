@@ -25,9 +25,8 @@ Route::resource('test', 'Student_controller'); //resource when
 
 
 //web
-
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
-
+Route::get('/services', 'PagesController@services');
 //endweb
 

@@ -1,5 +1,6 @@
-@extends('master')
+@extends('layouts.master')
 
 @section('content')
-    <h1>Index</h1>
+    <h1>{{$title}}</h1>
+    <h4>Index</h4>
 @endsection
