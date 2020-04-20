@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 //test
-Route::get('/test', function(){ 
-    return view('/test/indexTest');
-});
+Route::get('/test', function(){return view('/test/indexTest');});
 Route::resource('test', 'Student_controller'); //resource when
 //endtest
 
@@ -28,5 +26,7 @@ Route::resource('test', 'Student_controller'); //resource when
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
+
+Route::get('/posts', 'PostsController@index');
 //endweb
 

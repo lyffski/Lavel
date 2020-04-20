@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    @include(.web.navbars.navbar')
+    @include('web.navbars.navbar')
     
     <div class="container">         
         @yield('content')
