@@ -27,6 +27,8 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 
-Route::resource('/posts', 'PostsController@index');
+Route::resource('/posts', 'PostsController'); //automatically route=link all resources=func for db to the route
+
+
 //endweb
 
