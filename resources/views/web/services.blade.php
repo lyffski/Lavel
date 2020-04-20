@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('web.layouts.master')
 
 @section('content')
     <h1>Services</h1>

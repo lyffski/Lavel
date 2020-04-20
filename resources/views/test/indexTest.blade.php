@@ -1,4 +1,4 @@
-@extends('masterTest')
+@extends('test.masterTest')
 
 @section('content')
 

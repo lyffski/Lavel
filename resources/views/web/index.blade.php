@@ -1,6 +1,7 @@
-@extends('layouts.master')
+@extends('web.layouts.master')
 
 @section('content')
     <h1>{{$title}}</h1>
-    <h4>Index</h4>
+    <a href="web/user/login">Login</a>
+    <a href="web/user/register">Register</a>
 @endsection
