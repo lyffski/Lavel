@@ -12,11 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/posts/{post}', 'PostsController@show');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 //test
 Route::get('/test', function(){ 
     return view('/test/indexTest');
@@ -25,8 +24,10 @@ Route::resource('test', 'Student_controller'); //resource when
 //endtest
 
 
-Route::get('/posts/{post}', 'PostsController@show');
+//web
 
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
 
-
+//endweb
 

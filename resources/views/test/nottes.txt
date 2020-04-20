@@ -26,6 +26,8 @@ can be link with:
 • then using the obj call func: obj->delete() to delete record form table
 • return redirect()->route('{url_var?}.{and method of the ctr you used to work with this model to modif the db}') you can also append with() func if you want
 
+○ in sum whenever a func from --resource receive a request as param you validate the values or var of the requst and those have to save later using the ->save() func 
+&& every func have the create a obj of the model you are working with remember this rest of the desc is in the code it self
 
 
 
