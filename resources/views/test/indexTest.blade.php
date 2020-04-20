@@ -7,11 +7,11 @@
             <div>{{ \Session::get('success')}}</div>
         @endif
     <div>
-        <a href="{{route('test.create')}}"><button type="button" class="btn btn-outline-primary">Add Student</button></a><br><br> <!--href="test/create" do the same!!!--->
+        <!--href="test/create" do the same!!!--->
     </div> 
     <div class="card border-primary mb-3" >
     <table class="table table-hover">
-        <tr class="table-black">
+        <tr class="table-black" style="border-bottom: solid 2px #2180ac">
             <th><p class="text-primary">Forename</p></th>
             <th><p class="text-primary">Lastname</p></th>
             <th><p class="text-warning" style="margin-left:14px">Edit</p></th>
@@ -34,6 +34,7 @@
         </tr>
         @endforeach
     </table>
+    <a href="{{route('test.create')}}"><button type="button" class="btn btn-outline-primary form-control">Add Student</button></a> 
     </div>
 
 @endsection
