@@ -15,6 +15,8 @@ class CreatePostsModelsTable extends Migration
     {
         Schema::create('posts_models', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->mediumText('body'); 
             $table->timestamps();
         });
     }

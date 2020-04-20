@@ -61,8 +61,15 @@ service_container=
     dependency=class dependencies are "injected" into the class via the constructor or, in some cases, "setter" methods. //the injector class injects the service=(dependency) to the client=(dependent)
 
 
+tinker=
+to migrate data per terminal and not per manu (useful)
+Commands:{
+    php artisan tinker
+    App\Models\PostsModel::count()
+    $post
+}
 
-
+!!!NOTE CONTROLLER AND MODEL NAME SHOULD BE IN PLURAL CAPITALIZE!!! #here you did not use but now you know!! use it!
 
 
 
