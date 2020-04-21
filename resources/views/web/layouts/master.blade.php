@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    @include('web.navbars.navbar')
-    
+    @include('web.inc.navbar')
+    <div class="container">
+        @include('web.inc.messages')
+    </div>
     <div class="container">         
         @yield('content')
     </div>

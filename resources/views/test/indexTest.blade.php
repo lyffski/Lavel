@@ -1,7 +1,7 @@
-@extends('test.masterTest')
+@extends('web.layouts.master')
 
 @section('content')
-
+<h1>Student Table</h1>
     <div>
         @if(\Session::has('success')) <!---if session has a key or var 'success' the code below will be compile---> 
             <div>{{ \Session::get('success')}}</div>

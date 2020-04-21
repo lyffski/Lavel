@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\PostsModel;
+use App\Model\PostsModel; //with this link you can now create model in the controller file REMEMBER
 
 class PostsController extends Controller
 {
@@ -13,7 +13,7 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){ //index() you should get all the data form db you connected to the framework
-        $posts = PostsModel::all();      //using eloquent which make it easier to do the db quires than SQL command
+        $posts = PostsModel::orderBy('created_at', 'desc')->paginate(10);      //using eloquent which make it easier to do the db quires than SQL command
         return view("web.posts.index")->with('posts_key', $posts); //so 'posts_key' is the key that become the var in html and $posts is the values of the 'posts_key' REMEMBER THIS
     }
 
@@ -24,7 +24,7 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        //
+        return view('web.posts.create');
     }
 
 
@@ -35,7 +35,16 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request){ //request because you get the var from a form in view files
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        $post = new PostsModel;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+        
+        return redirect('/posts')->with('success', 'Post created successfully');
     }
 
 
@@ -46,7 +55,13 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id){
-        //
+        $post = PostsModel::find($id);
+        return view('web.posts.show')->with('post_key', $post);
+            //$posts = PostsModel::all();
+            //$posts = PostsModel::orderBy('title','desc')->take(1)->get(); //Eloquent query
+            //$posts =PostsModel::orderBy('title','desc')->get();
+            //return PostsModel::where('title', 'Post Two')->get();
+            //$posts = DB::select('SELECT * FROM posts'); //common SQL query
     }
 
 
