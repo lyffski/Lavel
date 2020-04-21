@@ -43,7 +43,6 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save();
-        
         return redirect('/posts')->with('success', 'Post created successfully');
     }
 
@@ -72,7 +71,8 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id){
-        //
+        $post = PostsModel::find($id);
+        return view('web.posts.edit')->with('post_key', $post);
     }
 
 
@@ -84,7 +84,15 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id){
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        $post = PostsModel::find($id);
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+        return redirect('/posts')->with('success', 'Post updated successfully');
     }
 
 
@@ -95,6 +103,8 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
-        //
+        $post = PostsModel::find($id);
+        $post -> delete();
+        return redirect('/posts')->with('success', 'Post removed successfully');
     }
 }
