@@ -31,3 +31,7 @@ Route::resource('/posts', 'PostsController'); //automatically route=link all res
 
 //endweb
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -20,7 +20,7 @@ class PagesController extends Controller
     public function services(){
         $data = array(
             'title' => 'Services',
-            'services' => ['PHP', 'Python', 'R']
+            'services' => ['PHP', 'Python', 'R', 'C++', 'C#', 'Java', 'JavaScript', 'HTML/CSS', 'mySQL', 'Tabealu']
         );
         return view('web.pages.services')->with($data);
     }

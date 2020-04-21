@@ -2,6 +2,5 @@
 
 @section('content')
     <h1>{{$title}}</h1>
-    <a href="web/user/login">Login</a>
-    <a href="web/user/register">Register</a>
+    Lavel is a web site that have been created using laravel framework for learning purposes.
 @endsection

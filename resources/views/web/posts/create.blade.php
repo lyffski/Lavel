@@ -1,4 +1,5 @@
-@extends('web/layouts/master')
+@extends('web.layouts.master')
+
 
 @section('content')
 <h2>Create Post</h2>
