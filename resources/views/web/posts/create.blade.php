@@ -3,8 +3,8 @@
 
 @section('content')
 <h2>Create Post</h2>
-{!! Form::open(['action' => 'PostsController@store', 'method'=>'POST']) !!}
-    <div class="form-group">
+{!! Form::open(['action' => 'PostsController@store', 'method'=>'POST']) !!} <!---instead of action is also possible to write--->
+    <div class="form-group">     <!--- ulr that will route to the route and there given further instruction--->
         {{Form::label('title', 'Title')}}
         {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
     </div>

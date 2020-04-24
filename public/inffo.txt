@@ -71,14 +71,34 @@ Commands:{
 
 !!!NOTE CONTROLLER AND MODEL NAME SHOULD BE IN PLURAL CAPITALIZE!!! #here you did not use but now you know!! use it!
 
+Middleware= is bridge between a request and a response -> type of filtering mechanism
+verifies whether user is authenticated
 
+Closure= is an anonymous function. 
+    Closures are often used as callback methods and can be used as a parameter in a function
 
+Controller_Middleware= asiest way of verifying HTTP requests before to the contorller
+Middleware can also be assigned to controller’s route or within your controller’s constructor
+    <?php
+    class UserController extends Controller {
+    public function __construct() {
+        $this->middleware('auth');
+        }
+    }?>
+??????
+Verb Path Action Route Name
+GET	/my	index	my.index
+GET	/my/create	create	my.create
+POST	/my	store	my.store
+GET	/my/{my}	show	my.show
+GET	/my/{my}/edit	edit	my.edit
+PUT/PATCH	/my/{my}	update	my.update
+DELETE	/my/{my}	destroy	my.destroy
+??????
+Response= can be sent from route or from controller
 
-
-
-
-
-
+Listeners= handle all the activities mentioned in an event that is being registered. 
+    Events provide a simple observer implementation which allows a user to subscribe and listen to various events triggered in the web application
 
 
 
