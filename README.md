@@ -1,8 +1,8 @@
 <p>Fully Functionaly Database edition with corresponding User and Student Table that can by modify</p>
 <br>
-other resouces
+Resouces:
 <ul>
-    <ol> <a href="https://laracasts.com/">Laracast</a></ol>
+    <li><a href="https://laracasts.com/">Laracast</a></li>
 </ul>
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
